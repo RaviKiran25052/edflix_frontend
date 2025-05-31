@@ -39,7 +39,7 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="relative bg-black text-white overflow-hidden px-6 md:px-20 py-14 pb-20">
+		<footer id='contact' className="relative bg-black text-white overflow-hidden px-6 md:px-20 py-14 pb-20">
 			{/* Large Background Text */}
 			<div className="absolute text-center bottom-0 left-0 right-0 overflow-hidden pointer-events-none mx-6 md:mx-20">
 				<div className="text-[2.7rem] md:text-[6.5rem] font-black text-gray-100 opacity-10 whitespace-nowrap mb-10 md:mb-0">

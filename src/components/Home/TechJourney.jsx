@@ -22,7 +22,7 @@ const TechJourney = () => {
 	];
 
 	return (
-		<div className="overflow-hidden container mx-auto px-6 md:px-20 py-16 lg:py-24 bg-gray-900 text-white">
+		<div id="why-choose" className="overflow-hidden container mx-auto px-6 md:px-20 py-16 lg:py-24 bg-gray-900 text-white">
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 				{/* Left Content */}

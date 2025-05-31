@@ -48,7 +48,7 @@ const TechProductRisksSection = () => {
 	];
 
 	return (
-		<section className="overflow-hidden py-12 lg:py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50" id="risks">
+		<section id="about" className="overflow-hidden py-12 lg:py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
 			<div className="max-w-7xl mx-auto px-6 md:px-20">
 				{/* Header Section */}
 				<div className="lg:text-left lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center mb-12 lg:mb-16">

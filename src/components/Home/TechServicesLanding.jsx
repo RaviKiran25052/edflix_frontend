@@ -22,30 +22,34 @@ const TechServicesLanding = () => {
 			icon: <Code className="w-6 h-6 text-blue-500" />,
 			title: "Web Development",
 			description: "SEO-Ready, Lightning-Fast Websites That Look Great And Perform Even Better. Scalability.",
-			imageSrc: "/images/service1.png"
+			imageSrc: "/images/service1.png",
+			link: "/web"
 		},
 		{
 			icon: <Smartphone className="w-6 h-6 text-purple-500" />,
 			title: "App Development",
 			description: "Smooth, Scalable Apps For iOS And Android That Users Love To Interact With.",
-			imageSrc: "/images/service2.png"
+			imageSrc: "/images/service2.png",
+			link: "/app"
 		},
 		{
 			icon: <Lightbulb className="w-6 h-6 text-orange-500" />,
 			title: "Product Development",
 			description: "From Idea To MVP, We Help You Build The Right Features, Fast.",
-			imageSrc: "/images/service3.png"
+			imageSrc: "/images/service3.png",
+			link: "/product"
 		},
 		{
 			icon: <Shield className="w-6 h-6 text-green-500" />,
 			title: "Cyber Security Integrated",
 			description: "Security Isn't An Add-On, It's Built Into Every Line Of Code From The Start.",
-			imageSrc: "/images/service4.png"
+			imageSrc: "/images/service4.png",
+			link: "/cyber"
 		}
 	];
 
 	return (
-		<div className="min-h-screen bg-gray-200">
+		<div className="min-h-screen bg-gray-200" id="services">
 			{/* Header Section */}
 			<div className="container mx-auto px-6 md:px-20 py-16">
 				<div
@@ -93,9 +97,13 @@ const TechServicesLanding = () => {
 
 
 								{/* Learn More Button */}
-								<button className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium group/btn transition-colors duration-300 mb-8">
+								<button
+									onClick={() => window.location.href = service.link}
+									data-aos="fade-up"
+									className="inline-flex text-sm items-center space-x-2 hover:border-blue-700 font-medium group/btn transition-colors duration-300 mb-8 rounded-full border border-gray-200 p-1 pl-3"
+								>
 									<span>Learn More</span>
-									<ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+									<ArrowRight className="p-2 w-8 h-8 rounded-full bg-gray-100 -rotate-45" />
 								</button>
 
 								<img

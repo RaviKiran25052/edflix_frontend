@@ -86,7 +86,7 @@ const TeamCarousel = () => {
 	};
 
 	return (
-		<div className="min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-white py-16 px-6 md:px-20">
+		<div id="team" className="min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-white py-16 px-6 md:px-20">
 
 			<div className="max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
