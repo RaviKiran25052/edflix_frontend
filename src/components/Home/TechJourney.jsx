@@ -28,8 +28,8 @@ const TechJourney = () => {
 				{/* Left Content */}
 				<div data-aos="fade-right">
 					<div className="mb-8">
-						<h2 className="text-3xl font-bold mb-6 leading-tight">
-							Why <span className="text-blue-400">We're The Right Fit</span>
+						<h2 className="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+							Why <span className="text-blue-600">We're The Right Fit</span>
 							<br />
 							For Your Tech Journey
 						</h2>

@@ -47,7 +47,7 @@ const ProcessSection = () => {
 			<div className="max-w-7xl mx-auto">
 				{/* Header */}
 				<div className="text-center mb-32" data-aos="fade-up">
-					<h2 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+					<h2 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-blue-600 to-[#999CFF] bg-clip-text text-transparent mb-6">
 						Our Process
 					</h2>
 					<p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ const ProcessSection = () => {
 								data-aos-delay={index * 200}
 							>
 								{/* Background Number */}
-								<div className="absolute -top-24 text-6xl md:text-9xl font-bold text-blue-100 select-none pointer-events-none z-0">
+								<div className="absolute -top-20 md:-top-24 text-8xl md:text-9xl font-bold text-blue-100 select-none pointer-events-none z-0">
 									{step.number}
 								</div>
 

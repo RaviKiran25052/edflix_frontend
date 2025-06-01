@@ -4,9 +4,12 @@ import {
 	X,
 	ArrowRight,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const navigate = useNavigate();
+	const location = window.location.pathname;
 
 	// Smooth scroll function
 	const handleScrollTo = (id) => {
@@ -56,48 +59,79 @@ const NavBar = () => {
 
 						{/* Desktop Navigation */}
 						<div className="hidden lg:block">
-							<div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
-								<button
-									onClick={() => handleScrollTo('about')}
-									className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-								>
-									About Us
-								</button>
-								<button
-									onClick={() => handleScrollTo('services')}
-									className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-								>
-									Services
-								</button>
-								<button
-									onClick={() => handleScrollTo('why-choose')}
-									className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-								>
-									Why Choose Us
-								</button>
-								<button
-									onClick={() => handleScrollTo('team')}
-									className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-								>
-									Our Team
-								</button>
-							</div>
-						</div>
-
-						<div className="hidden md:block">
-							<button
-								className="relative bg-white rounded-lg group hover:scale-105 text-gray-900 px-20 py-5 hover:bg-gray-50 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
-								onClick={() => handleScrollTo('contact')}
-							>
-								<div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-pink-500 p-[2px]">
-									<div className="flex h-full w-full items-center justify-center rounded-md bg-white">
-										<span className="px-4 flex items-center gap-2">
-											Contact Us
-											<ArrowRight size={16} className='group-hover:translate-x-1 transition-transform' />
-										</span>
-									</div>
+							{location === '/' ?
+								<div className="flex items-center space-x-6 xl:space-x-8">
+									<button
+										onClick={() => handleScrollTo('about')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										About Us
+									</button>
+									<button
+										onClick={() => handleScrollTo('services')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Services
+									</button>
+									<button
+										onClick={() => handleScrollTo('why-choose')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Why Choose Us
+									</button>
+									<button
+										onClick={() => handleScrollTo('team')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Our Team
+									</button>
+									<button
+										className="relative bg-white rounded-lg group hover:scale-105 text-gray-900 px-20 py-5 hover:bg-gray-50 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+										onClick={() => handleScrollTo('contact')}
+									>
+										<div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-pink-500 p-[2px]">
+											<div className="flex h-full w-full items-center justify-center rounded-md bg-white">
+												<span className="px-4 flex items-center gap-2">
+													Contact Us
+													<ArrowRight size={16} className='group-hover:translate-x-1 transition-transform' />
+												</span>
+											</div>
+										</div>
+									</button>
 								</div>
-							</button>
+								:
+								<div className="flex items-baseline space-x-6 xl:space-x-8">
+									<button
+										onClick={() => navigate('/')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Home
+									</button>
+									<button
+										onClick={() => navigate('/web')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Web Dev
+									</button>
+									<button
+										onClick={() => navigate('/app')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										App Dev
+									</button>
+									<button
+										onClick={() => navigate('/product')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										Product Dev
+									</button>
+									<button
+										onClick={() => navigate('/cyber')}
+										className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+									>
+										CyberSecurity
+									</button>
+								</div>}
 						</div>
 
 						{/* Mobile menu button */}
@@ -126,8 +160,8 @@ const NavBar = () => {
 			</nav>
 			<div
 				className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${isOpen
-						? 'opacity-100 pointer-events-auto'
-						: 'opacity-0 pointer-events-none'
+					? 'opacity-100 pointer-events-auto'
+					: 'opacity-0 pointer-events-none'
 					}`}
 				onClick={handleOverlayClick}
 			>
@@ -156,29 +190,51 @@ const NavBar = () => {
 
 					{/* Sidebar Navigation */}
 					<div className="px-6 py-8 space-y-2">
-						{[
-							{ id: 'about', label: 'About Us' },
-							{ id: 'services', label: 'Services' },
-							{ id: 'why-choose', label: 'Why Choose Us' },
-							{ id: 'team', label: 'Our Team' }
-						].map((item, index) => (
-							<button
-								key={item.id}
-								onClick={() => handleScrollTo(item.id)}
-								className={`block w-full text-left px-4 py-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium transform hover:translate-x-1`}
-							>
-								{item.label}
-							</button>
-						))}
+						{location === '/' ?
+							<>
+								{[
+									{ id: 'about', label: 'About Us' },
+									{ id: 'services', label: 'Services' },
+									{ id: 'why-choose', label: 'Why Choose Us' },
+									{ id: 'team', label: 'Our Team' }
+								].map((item, index) => (
+									<button
+										key={item.id}
+										onClick={() => handleScrollTo(item.id)}
+										className={`block w-full text-left px-4 py-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium transform hover:translate-x-1`}
+									>
+										{item.label}
+									</button>
+								))}
 
-						{/* Contact Button */}
-						<button
-							onClick={() => handleScrollTo('contact')}
-							className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-4 rounded-lg mt-6 transition-all duration-300 font-medium flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-						>
-							Contact Us
-							<ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-						</button>
+								{/* Contact Button */}
+								<button
+									onClick={() => handleScrollTo('contact')}
+									className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-4 rounded-lg mt-6 transition-all duration-300 font-medium flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+								>
+									Contact Us
+									<ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+								</button>
+							</>
+							:
+							<>
+								{[
+									{ label: 'Home', link: '/' },
+									{ label: 'Web Dev', link: '/web' },
+									{ label: 'App Dev', link: '/app' },
+									{ label: 'Product Dev', link: '/product' },
+									{ label: 'CyberSecurity', link: '/cyber' }
+								].map((item, index) => (
+									<button
+										key={index}
+										onClick={() => navigate(item.link)}
+										className={`block w-full text-left px-4 py-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium transform hover:translate-x-1`}
+									>
+										{item.label}
+									</button>
+								))}
+							</>
+						}
 					</div>
 
 					{/* Sidebar Footer */}

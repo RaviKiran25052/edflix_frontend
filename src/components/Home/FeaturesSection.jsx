@@ -29,23 +29,23 @@ const FeaturesSection = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-
+		<div className="min-h-screen bg-black text-white overflow-hidden">
+			<img src="./images/featureBg.png" alt="" className='absolute w-full min-h-screen object-cover bg-center' />
 			<div className="relative z-10 container mx-auto px-6 md:px-20 py-12 lg:py-20">
 				{/* Main Heading */}
 				<div
 					className="flex flex-col items-center text-center space-y-6 mb-16"
 					data-aos="fade-up"
 				>
-					<h1 className="text-3xl font-bold leading-tight">
+					<h1 className="text-2xl md:text-3xl font-bold leading-tight">
 						Here's{' '}
-						<span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+						<span className="text-blue-600">
 							How Edflix Helps You
 						</span>
 						<br />
 						Launch With Confidence
 					</h1>
-					<p className="text-sm md:text-lg text-gray-300 max-w-2xl">
+					<p className="text-xs md:text-lg text-gray-300 max-w-2xl">
 						Whether You're Struggling With Unclear Tech Direction, Post-MVP Uncertainty,
 						Or Security Blind Spots, We're Here To Change That.
 					</p>

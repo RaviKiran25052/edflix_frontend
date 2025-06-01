@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ExternalLink } from 'lucide-react';
 
 const ContactFormSection = () => {
 	const [formData, setFormData] = useState({
@@ -37,8 +38,8 @@ const ContactFormSection = () => {
 	return (
 		<section className="py-20 px-6 md:px-20">
 			<div className="max-w-7xl mx-auto">
-				<div 
-					className="bg-gradient-to-br from-sky-600 via-sky-700 to-indigo-800 rounded-3xl p-8 md:p-16 shadow-xl"
+				<div
+					className="bg-gradient-to-br from-[#374e7a] via-[#789bc1] to-[#a2c4df] rounded-3xl p-8 md:p-16 shadow-xl"
 					data-aos="fade-up"
 				>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -48,7 +49,7 @@ const ContactFormSection = () => {
 								<p className="text-blue-200 font-medium tracking-wider uppercase text-sm">
 									LET'S TALK
 								</p>
-								<h2 className="text-4xl md:text-5xl font-bold leading-tight">
+								<h2 className="text-4xl md:text-4xl font-semibold leading-tight">
 									Start Your Website Journey with a Trusted Tech Partner
 								</h2>
 							</div>
@@ -158,9 +159,12 @@ const ContactFormSection = () => {
 								<div className="pt-4">
 									<button
 										type="submit"
-										className="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+										className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
 									>
-										Schedule a call
+										<span className='inline-flex items-center justify-center '>
+											Start Conversation
+											<ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+										</span>
 									</button>
 								</div>
 							</form>

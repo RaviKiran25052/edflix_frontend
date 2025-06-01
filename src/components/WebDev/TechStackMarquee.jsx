@@ -46,7 +46,7 @@ const TechStackMarquee = () => {
 				<div className="text-center mb-6" data-aos="fade-up">
 					<h2 className="text-4xl font-bold text-gray-900 mb-4">
 						Tech Stack{' '}
-						<span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+						<span className="bg-gradient-to-r from-blue-600 to-[#999CFF] bg-clip-text text-transparent">
 							We Use To Build
 						</span>{' '}
 						Your Website

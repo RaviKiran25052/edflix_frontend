@@ -95,7 +95,7 @@ const TeamCarousel = () => {
 					<div className="space-y-8">
 						<div className="space-y-6">
 							<h1 className="text-4xl font-bold text-gray-900 leading-tight" data-aos="fade-up">
-								The <span className="text-blue-600 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">People Behind</span> Your Product
+								The <span className="text-blue-600">People Behind</span> Your Product
 							</h1>
 
 							<p className="text-gray-600 leading-relaxed max-w-lg" data-aos="fade-up">
@@ -114,7 +114,7 @@ const TeamCarousel = () => {
 						{/* Navigation Arrows - Outside the carousel */}
 						<button
 							onClick={handlePrev}
-							className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-20"
+							className="absolute left-0 top-1/2 transform -translate-y-1/2 border-2 border-gray-400 text-gray-500 hover:border-gray-700 hover:text-gray-800 bg-white p-2 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-20"
 							disabled={isAnimating}
 							data-aos="fade-right"
 						>
@@ -123,7 +123,7 @@ const TeamCarousel = () => {
 
 						<button
 							onClick={handleNext}
-							className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-20"
+							className="absolute right-0 top-1/2 transform -translate-y-1/2 border-2 border-gray-400 text-gray-500 hover:border-gray-700 hover:text-gray-800 bg-white p-2 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-20"
 							disabled={isAnimating}
 							data-aos="fade-left"
 						>

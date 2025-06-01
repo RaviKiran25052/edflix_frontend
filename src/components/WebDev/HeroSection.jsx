@@ -18,21 +18,26 @@ const HeroSection = () => {
 				<img
 					src="./images/webDevHero.png"
 					alt="Wave"
-					className="w-full h-full object-cover object-bottom"
+					className="w-full h-full hidden md:block object-cover object-bottom bg-center"
+				/>
+				<img
+					src="./images/webDevHeroResp.png"
+					alt="Wave"
+					className="w-full h-full md:hidden block object-cover object-bottom bg-center"
 				/>
 			</div>
 
 			{/* Main Content */}
-			<div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
+			<div className="relative z-10 container mx-auto px-6 flex items-center justify-center min-h-screen">
 				<div className="text-center max-w-4xl" data-aos="fade-down">
 					{/* Main Heading */}
-					<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+					<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
 						Your Website, Built To Perform
 					</h1>
 
 					{/* Subheading */}
-					<h2 className="text-2xl md:text-3xl font-bold mb-6 leading-tight">
-						<span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+					<h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+						<span className="bg-gradient-to-r from-blue-600 to-[#999CFF] bg-clip-text text-transparent">
 							Fast, Secure, And Scalable
 						</span>
 					</h2>

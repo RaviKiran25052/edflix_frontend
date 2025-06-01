@@ -19,7 +19,7 @@ const TechnologiesSection = () => {
 						className="text-4xl font-bold mb-16 leading-tight"
 						data-aos="fade-up"
 					>
-						Technologies <span className="text-blue-400">That Power</span> Our Business
+						Technologies <span className="text-blue-600">That Power</span> Our Business
 					</h2>
 
 					{/* Tech Stack Image */}

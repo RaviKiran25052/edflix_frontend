@@ -60,11 +60,11 @@ const BlogSection = () => {
 			<div className="max-w-7xl mx-auto">
 				{/* Header Section */}
 				<div className="text-center mb-16" data-aos="fade-up" data-aos-delay="200">
-					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="300">
-						Ideas <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">That Inspire</span> Growth
+					<h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="300">
+						Ideas <span className="text-blue-600">That Inspire</span> Growth
 					</h1>
-					<p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-						From Product Tips To Cybersecurity, Know How Everything<br />
+					<p className="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+						From Product Tips To Cybersecurity, Know How Everything
 						Founders And Teams Need To Grow With Confidence.
 					</p>
 				</div>

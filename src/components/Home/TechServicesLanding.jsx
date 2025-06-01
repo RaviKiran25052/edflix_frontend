@@ -56,13 +56,13 @@ const TechServicesLanding = () => {
 					className="text-center max-w-4xl mx-auto mb-20"
 					data-aos="fade-up"
 				>
-					<h1 className="text-4xl font-bold text-gray-900 mb-6">
+					<h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
 						Tech Services That Move You{' '}
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+						<span className="text-blue-600">
 							Forward
 						</span>
 					</h1>
-					<p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+					<p className="text-xs md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
 						We Provide End-To-End Digital Solutions, Ensuring High Performance,
 						Seamless User Experience, And Growth.
 					</p>
@@ -99,7 +99,6 @@ const TechServicesLanding = () => {
 								{/* Learn More Button */}
 								<button
 									onClick={() => window.location.href = service.link}
-									data-aos="fade-up"
 									className="inline-flex text-sm items-center space-x-2 hover:border-blue-700 font-medium group/btn transition-colors duration-300 mb-8 rounded-full border border-gray-200 p-1 pl-3"
 								>
 									<span>Learn More</span>
@@ -109,6 +108,7 @@ const TechServicesLanding = () => {
 								<img
 									src={service.imageSrc}
 									alt={service.title}
+									data-aos="slide-up"
 									className="w-full h-auto rounded-lg group-hover:scale-105 transition-transform duration-500"
 								/>
 							</div>

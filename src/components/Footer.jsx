@@ -4,6 +4,36 @@ import 'aos/dist/aos.css';
 import { Linkedin, Instagram, Twitter } from 'lucide-react';
 
 const Footer = () => {
+	const location = window.location.pathname;
+
+	const getServiceLinks = () => {
+		switch (location) {
+			case '/web':
+				return [
+					{ label: "App Development", link: "/app" },
+					{ label: "Product Development", link: "/product" },
+					{ label: "Cyber Security", link: "/cyber" }
+				];
+			case '/app':
+				return [
+					{ label: "Web Development", link: "/web" },
+					{ label: "Product Development", link: "/product" },
+					{ label: "Cyber Security", link: "/cyber" }
+				];
+			case '/product':
+				return [
+					{ label: "Web Development", link: "/web" },
+					{ label: "App Development", link: "/app" },
+					{ label: "Cyber Security", link: "/cyber" }
+				];
+			case '/cyber':
+				return [
+					{ label: "Web Development", link: "/web" },
+					{ label: "App Development", link: "/app" },
+					{ label: "Product Development", link: "/product" }
+				];
+		}
+	}
 	useEffect(() => {
 		AOS.init({
 			duration: 1000,
@@ -22,32 +52,18 @@ const Footer = () => {
 
 			<div className="max-w-7xl mx-auto relative z-10">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-					{/* Left Navigation */}
-					<div className="flex flex-wrap gap-8 justify-center lg:justify-start">
-						<a
-							href="/about"
-							className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
-							data-aos="fade-up"
-							data-aos-delay="100"
-						>
-							About
-						</a>
-						<a
-							href="/services"
-							className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
-							data-aos="fade-up"
-							data-aos-delay="200"
-						>
-							Services
-						</a>
-						<a
-							href="/contact"
-							className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
-							data-aos="fade-up"
-							data-aos-delay="300"
-						>
-							Contact Us
-						</a>
+					< div className="flex items-center gap-6">
+						{getServiceLinks().map((service, index) => (
+							<a
+								key={index}
+								href={service.link}
+								className="text-gray-300 text-center hover:text-white transition-colors duration-300 font-medium"
+								data-aos="fade-up"
+								data-aos-delay={`${index * 100}`}
+							>
+								{service.label}
+							</a>
+						))}
 					</div>
 
 					{/* Center Company Info */}
@@ -129,7 +145,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer >
 	);
 };
 

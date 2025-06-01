@@ -27,7 +27,7 @@ const Footer = () => {
 		name: '',
 		mobile: '',
 		email: '',
-		service: ''
+		description: ''
 	});
 
 	const handleInputChange = (e) => {
@@ -49,7 +49,7 @@ const Footer = () => {
 					name: '',
 					mobile: '',
 					email: '',
-					service: ''
+					description: ''
 				});
 			} else {
 				toast.error('Failed to submit form. Please try again.');
@@ -63,15 +63,8 @@ const Footer = () => {
 	};
 
 	return (
-		<footer id='contact' className="relative bg-black text-white overflow-hidden px-6 md:px-20 py-14 pb-20">
-			{/* Large Background Text */}
-			<div className="absolute text-center bottom-0 left-0 right-0 overflow-hidden pointer-events-none mx-6 md:mx-20">
-				<div className="text-[2.7rem] md:text-[6.5rem] font-black text-gray-100 opacity-10 whitespace-nowrap mb-10 md:mb-0">
-					EDFLIX SOL PVT LTD
-				</div>
-			</div>
-
-			<div className="relative z-10 max-w-7xl mx-auto py-16">
+		<footer id='contact' className="bg-black text-white overflow-hidden">
+			<div className="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-14">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
 					{/* Left Section - Company Info */}
@@ -165,9 +158,9 @@ const Footer = () => {
 							<div>
 								<input
 									type="text"
-									name="service"
-									placeholder="Service"
-									value={formData.service}
+									name="description"
+									placeholder="Description"
+									value={formData.description}
 									onChange={handleInputChange}
 									className="w-full px-0 py-4 bg-transparent border-0 border-b border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-200"
 								/>
@@ -176,8 +169,8 @@ const Footer = () => {
 							<div className="pt-4">
 								<button
 									onClick={handleSubmit}
-									disabled={!formData.name || !formData.mobile || !formData.email || !formData.service}
-									className="px-8 py-3 bg-transparent border border-white text-white group hover:bg-white hover:text-gray-900 rounded-full font-medium transition-colors duration-200 group"
+									disabled={!formData.name || !formData.mobile || !formData.email || !formData.description}
+									className="px-8 py-2 bg-transparent border border-white text-white group hover:bg-white hover:text-gray-900 rounded-full font-medium transition-colors duration-200 group"
 								>
 									{loading ? (
 										<span className="inline-flex items-center justify-center ">
@@ -188,15 +181,17 @@ const Footer = () => {
 											Submitting...
 										</span>
 									) :
-										<span className='inline-flex items-center justify-center '>
-											Start Conversation
-											<ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-										</span>
+										<span>Submit</span>
 									}
 								</button>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div className="text-center overflow-hidden pointer-events-none mb-6">
+				<div className="text-[2rem] md:text-[4.5rem] lg:text-[7rem] font-black text-gray-100 opacity-10 whitespace-nowrap mb-10 md:mb-0">
+					EDFLIX SOL PVT LTD
 				</div>
 			</div>
 		</footer>
