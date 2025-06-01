@@ -42,6 +42,7 @@ const Footer = () => {
 
 		try {
 			setLoading(true);
+			console.log(API_URL);
 
 			const res = await axios.post(`${API_URL}/contact`, formData);
 			if (res.status === 201) {
