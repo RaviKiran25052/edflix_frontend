@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from "./pages/Home"
 import WebDev from "./pages/WebDev"
 import AppDev from "./pages/AppDev"
@@ -8,6 +10,7 @@ import CyberSecurity from "./pages/CyberSecurity"
 const App = () => {
   return (
     <BrowserRouter>
+      <ToastContainer position='top-center' pauseOnHover={false} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/web" element={<WebDev />} />
