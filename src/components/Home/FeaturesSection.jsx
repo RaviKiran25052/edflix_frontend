@@ -39,7 +39,7 @@ const FeaturesSection = () => {
 				>
 					<h1 className="text-2xl md:text-3xl font-bold leading-tight">
 						Here's{' '}
-						<span className="text-blue-600">
+						<span className="text-blue-600 inline-block">
 							How Edflix Helps You
 						</span>
 						<br />
