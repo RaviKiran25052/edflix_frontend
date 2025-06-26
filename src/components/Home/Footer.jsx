@@ -70,12 +70,7 @@ const Footer = () => {
 					{/* Left Section - Company Info */}
 					<div className="space-y-8">
 						{/* Logo */}
-						<div className="flex items-center space-x-3">
-							<div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-								<div className="w-6 h-6 bg-gray-900 rounded-sm"></div>
-							</div>
-							<span className="text-2xl font-bold">logoipsum</span>
-						</div>
+						<img src="/logo.png" alt="logo" className='h-16 md:h-20' />
 
 						{/* Tagline */}
 						<div className="space-y-4">

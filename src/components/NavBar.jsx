@@ -51,11 +51,7 @@ const NavBar = () => {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
 					<div className="flex justify-between items-center h-16">
 						{/* Logo */}
-						<div className="flex-shrink-0">
-							<h1 className="text-lg sm:text-xl font-bold text-gray-900">
-								/EDFLIX SOL PVT LTD
-							</h1>
-						</div>
+						<img src="/logoTransparent.png" alt="logo" className='h-8 md:h-9'/>
 
 						{/* Desktop Navigation */}
 						<div className="hidden lg:block">
